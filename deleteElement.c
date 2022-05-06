@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -33,11 +32,8 @@ int main(){
    deleteElement(myarry,&len,2,&printarry);
    deleteElement(myarry,&len,2,&printarry);
    deleteElement(myarry,&len,0,&printarry);
-   deleteElement(myarry,&len,0,&printarry);
-   deleteElement(myarry,&len,0,&printarry);
 
-
-
+   printf("hellow world");
 
    return 0;
 }
