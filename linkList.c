@@ -19,15 +19,20 @@ int main(){
     struct Node* b;
     struct Node* c;
     struct Node d;
+    struct Node* x;
     a = (struct Node*)malloc(sizeof(struct Node));
     b = (struct Node*)malloc(sizeof(struct Node));
     c = (struct Node*)malloc(sizeof(struct Node));
+    x = (struct Node*)malloc(sizeof(struct Node));
 
     a->data = 45;
     a->next = b;
 
     b->data = 55;
-    b->next = c;
+    b->next = x;
+
+    x->data = 1000;
+    x->next = c;
 
     c->data = 65; //(*c).data
     c->next = &d;
