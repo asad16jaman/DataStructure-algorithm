@@ -15,6 +15,7 @@ int fun(struct Node *head){
 }
 
 int main(){
+
     struct Node* a;
     struct Node* b;
     struct Node* c;
