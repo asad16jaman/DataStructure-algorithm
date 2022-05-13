@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+struct Node *f = NULL;
+struct Node *r = NULL;
 
 struct Node
 {
     int data;
     struct Node *next;
 };
-
-
 
 void linkedListTraversal(struct Node *ptr)
 {
@@ -21,9 +20,7 @@ void linkedListTraversal(struct Node *ptr)
     }
 }
 
-
-
-void enqueue(struct Node *f,struct Node *r,int val)
+void enqueue(int val)
 {
     struct Node *n = (struct Node *) malloc(sizeof(struct Node));
     if(n==NULL){
@@ -41,7 +38,7 @@ void enqueue(struct Node *f,struct Node *r,int val)
         }
     }
 }
-/*
+
 int dequeue()
 {
     int val = -1;
@@ -56,15 +53,19 @@ int dequeue()
     }
     return val;
 }
-*/
 
 int main()
 {
-    struct Node *f = NULL;
-    struct Node *r = NULL;
-    enqueue(&f,&r,34);
-    printf("%d",f->data);
-
-
+    linkedListTraversal(f);
+    printf("Dequeuing element %d\n", dequeue());
+    enqueue(34);
+    enqueue(4);
+    enqueue(7);
+    enqueue(17);
+    printf("Dequeuing element %d\n", dequeue());
+    printf("Dequeuing element %d\n", dequeue());
+    printf("Dequeuing element %d\n", dequeue());
+    printf("Dequeuing element %d\n", dequeue());
+    linkedListTraversal(f);
     return 0;
 }
